@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal Zacarias – A real sem censura</title>
+  <style>
+    body{background:#000;color:#0f0;font-family:monospace;margin:0}
+    header{background:#111;padding:10px;text-align:center;font-size:1.4em}
+    .grid{display:flex;flex-wrap:wrap;justify-content:center}
+    .thumb{width:250px;margin:5px;position:relative;cursor:pointer}
+    .thumb img{width:100%;height:140px;object-fit:cover}
+    .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:40px;color:#fff}
+    .btn-assistir{
+      display:block;width:220px;margin:30px auto;
+      background:linear-gradient(45deg,#8b00ff,#000);
+      color:#fff;text-align:center;padding:15px 0;
+      font:bold 18px/1 sans-serif;text-decoration:none;
+      border-radius:25px;box-shadow:0 0 20px rgba(139,0,255,.6);
+      transition:.3s;
+    }
+    .btn-assistir:hover{transform:scale(1.05);box-shadow:0 0 30px rgba(139,0,255,.9);}
+  </style>
+</head>
+<body>
+  <header>PORTAL ZACARIAS – A REAL NÃO TEM FREIO</header>
+
+  <a class="btn-assistir" href="https://outrosite.com" target="_top">CLIQUE AQUI PARA ASSISTIR</a>
+
+  <div class="grid">
+    <div class="thumb" data-v="1">
+      <img src="capa1.jpg" alt="acidente">
+      <div class="play">▶</div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.thumb').forEach(t=>{
+      t.onclick=_=>open('player.html?id='+t.dataset.v)
+    })
+  </script>
+</body>
+</html>
